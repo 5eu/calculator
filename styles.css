@@ -1,0 +1,120 @@
+@media(orientation:portrait){
+    .calculator{
+        width:100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media(orientation:landscape){
+    .calculator{
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 9/16;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    box-sizing: border-box; 
+    justify-content: space-evenly;
+}
+
+/* display,expression */
+
+.display-section{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10%;
+
+}
+.expression{
+    font-size: 24px;
+    color: gray;
+}
+
+.result{
+    font-size: 66px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/* buttons */
+
+.buttons-section button{
+    width: 80px;
+    aspect-ratio: 1/1;
+    font-size: 42px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+
+}
+
+.buttons-section button:active{
+    filter: brightness(85%);
+    transform: scale(0.97);
+    transition: transform 0.05s ease;
+}
+
+
+.buttons-section{
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+}
+
+.number{
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+.number button{
+    background-color: #505050;
+    color: white;
+}
+
+.operator{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.operator button{
+    background-color: #FF9500;
+    color: white;
+}
